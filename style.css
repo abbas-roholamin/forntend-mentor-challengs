@@ -1,0 +1,149 @@
+/** @format */
+
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --esaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Red Hat Display", sans-serif;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+img {
+  max-inline-size: 100%;
+  block-size: auto;
+}
+ul {
+  list-style: none;
+}
+main {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background-image: url("./images/pattern-background-desktop.svg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: var(--pale-blue);
+}
+
+.card {
+  max-inline-size: 44rem;
+  background-color: #fff;
+  border-radius: 3rem;
+  overflow: hidden;
+}
+.card__header--img {
+  width: 100%;
+  display: block;
+}
+
+.card__body {
+  padding: 4rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+.main__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+.main__content--title {
+  text-align: center;
+  font-weight: 900;
+  font-size: 2.8rem;
+  color: var(--dark-blue);
+}
+
+.main__content--content {
+  font-size: 1.6rem;
+  text-align: center;
+  color: var(--esaturated-blue);
+  font-weight: 500;
+}
+
+.details {
+  background-color: var(--very-pale-blue);
+  padding: 2rem;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+}
+.details__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.details__list--price {
+  color: var(--dark-blue);
+  font-weight: 900;
+  display: flex;
+  gap: 2rem;
+}
+.details__list--price img {
+  background-color: var(--pale-blue);
+  border-radius: 100%;
+}
+.details__list--price p:first-child {
+  font-size: 1.6rem;
+}
+.details__list--price p:last-child {
+  color: var(--esaturated-blue);
+  font-weight: 500;
+}
+.details__list--action a {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--bright-blue);
+}
+.details__list--action a:hover {
+  opacity: 0.7;
+  text-decoration: none;
+}
+
+.card__footer {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.card__footer--payment {
+  padding: 1.8rem 0;
+  background-color: var(--bright-blue);
+  color: #f7f2f2;
+  border: transparent;
+  border-radius: 1rem;
+  font-weight: 700;
+  font-size: 1.4rem;
+  cursor: pointer;
+  box-shadow: 0rem 1rem 2rem 3px #ddd;
+}
+
+.card__footer--payment:hover {
+  opacity: 0.7;
+}
+.card__footer--cancel {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 900;
+  color: var(--esaturated-blue);
+  font-size: 1.4rem;
+  transition: color 0.2s ease-out;
+}
+
+.card__footer--cancel:hover {
+  color: var(--dark-blue);
+}
