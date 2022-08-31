@@ -1,0 +1,169 @@
+/** @format */
+
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --dark-blue-bg: hsl(217, 54%, 11%);
+  --dark-blue-card: hsl(216, 50%, 16%);
+  --dark-blue-line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+/* Genral styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Outfit", sans-serif;
+  line-height: 1.5;
+  background-color: var(--dark-blue-bg);
+  color: var(--white);
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+
+/* Main container styles */
+main {
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+/* Card styles */
+.card {
+  max-width: 300px;
+  background-color: var(--dark-blue-card);
+  padding: 2.3rem 2.3rem 2.8rem;
+  border-radius: 1.4rem;
+  box-shadow: 0rem 2rem 8px 12px hsl(217deg 54% 9% / 14%);
+}
+
+/* Card image section styles */
+.image__section {
+  border-radius: 0.8rem;
+  overflow: hidden;
+  position: relative;
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.image__section::before {
+  content: "";
+  background-color: var(--cyan);
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: all 0.5s ease-out;
+}
+.image__section:hover::before {
+  opacity: 0.5;
+  transform: scale(1);
+}
+
+.image__section--main {
+  max-width: 100%;
+  display: block;
+}
+
+.image__section--sub {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 0.4s ease-out;
+}
+
+.image__section:hover .image__section--sub {
+  opacity: 1;
+}
+
+/* Card contnent styles */
+.card__body {
+  display: flex;
+  flex-flow: column;
+  border-bottom: 1px solid var(--dark-blue-line);
+  margin-bottom: 1.3rem;
+}
+.card__body--title {
+  font-size: 1.9rem;
+  letter-spacing: 0.08rem;
+  margin-bottom: 1.2rem;
+  transition: all 0.5s ease-out;
+  color: var(--white);
+  font-weight: 700;
+}
+
+.card__body--title:hover {
+  color: var(--cyan);
+}
+
+.card__body--contnent {
+  color: var(--soft-blue);
+  font-weight: 300;
+  font-size: 1.6rem;
+}
+
+.pricing {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.43rem;
+}
+
+.pricing__price {
+  color: var(--cyan);
+  font-weight: 600;
+  padding: 2.2rem 0;
+}
+.pricing__date {
+  color: var(--soft-blue);
+}
+
+:is(.pricing__price, .pricing__date) {
+  display: flex;
+  align-items: center;
+}
+
+:is(.pricing__price--ethereum, .pricing__date--clock) {
+  margin-right: 0.6rem;
+}
+
+/* Card footer styles */
+.card__footer {
+  display: flex;
+  align-items: center;
+  color: var(--soft-blue);
+  font-size: 1.45rem;
+}
+
+.card__footer--avatar {
+  width: 3rem;
+  height: auto;
+  border: 0.1rem solid var(--white);
+  border-radius: 100%;
+  margin-right: 1.4rem;
+}
+
+.card__footer--info a {
+  color: var(--white);
+  transition: all 0.5s ease-out;
+}
+.card__footer--info a:hover {
+  color: var(--cyan);
+}

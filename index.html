@@ -1,0 +1,83 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | NFT preview card component</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="card">
+          <div class="card__header">
+            <a href="#" class="image__section">
+              <img
+                src="./images/image-equilibrium.jpg"
+                alt="equilibrium image"
+                class="image__section--main"
+                Sr-only="go to equilibrium more details page"
+              />
+              <img
+                src="./images/icon-view.svg"
+                alt=""
+                class="image__section--sub"
+                aria-hidden="true"
+              />
+            </a>
+          </div>
+          <div class="card__body">
+            <a href="#" class="card__body--title">Equilibrium #3429</a>
+            <p class="card__body--contnent">
+              Our Equilibrium collection promotes balance and calm.
+            </p>
+            <ul class="pricing">
+              <li class="pricing__price"
+                ><img
+                  src="./images/icon-ethereum.svg"
+                  alt=""
+                  aria-hidden="true"
+                  class="pricing__price--ethereum"
+                />
+                0.041 ETH
+              </li>
+              <li class="pricing__date"
+                ><img
+                  src="./images/icon-clock.svg"
+                  alt=""
+                  aria-hidden="true"
+                  class="pricing__date--clock"
+                />
+                3 days left
+              </li>
+            </div>
+          <div class="card__footer">
+            <img
+              src="./images/image-avatar.png"
+              alt="Jules Wyvern"
+              class="card__footer--avatar"
+            />
+            <p class="card__footer--info">
+              Creation of <a href="#">Jules Wyvern</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
